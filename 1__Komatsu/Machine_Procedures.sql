@@ -1,6 +1,7 @@
 USE dbTemsa
 GO
 
+
 ----------------------- CREATE -----------------------  (UPDATED_V1)
 
 --BEGIN TRANSACTION
@@ -82,33 +83,31 @@ GO
 --		@ErrorDescription varchar(50),
 --		@ErrorMessage varchar(71);
 
-
 --EXEC	Machine_GetByCondition
---		@Language = 'EN',
+--		@Language = 'TR',
 --		@PageNumber = 1,
 --		@PageSize = 10,
---		@MainCategoryName = NULL,
---		@SubCategoryName = 'Bulldozers',
+--		@MainCategoryName = 'Maden Makineleri',
+--		@SubCategoryName = NULL,
 --		@BrandName = NULL,
 --		@Model = NULL,
 --		@Stock = NULL,
 --		@Rented = NULL,
 --		@Sold = NULL,
 --		@Year = NULL,
---		@HandStatus = 'second hand',
+--		@HandStatus = NULL,
 --		@TotalCount = @TotalCount out,
 --		@StatusCode = @StatusCode out,
 --		@ErrorCode = @ErrorCode out,
 --		@ErrorDescription = @ErrorDescription out,
 --		@ErrorMessage = @ErrorMessage out
 
-
 --SELECT  @TotalCount AS 'TotalCount',
 --		@StatusCode AS 'StatusCode',
 --		@ErrorCode AS 'ErrorCode',
 --		@ErrorDescription AS 'ErrorDescription',
 --		@ErrorMessage AS 'ErrorMessage'
-		
+
 
 
 -------------------- DISPLAY ONE MACHINE -------------------- (UPDATED_V1)
@@ -156,22 +155,22 @@ GO
 
 --	EXEC	Machine_Update
 --			@Language = 'TR',  -- page language
---			@OldMainCategoryName = 'Ýþ Makineleri',
---			@OldSubCategoryName = 'Dozerler',
---			@Id = '3D48B316-8CAE-4C0E-9C8A-43FCC05A546F',
---			@MainCategoryName = NULL,
---			@SubCategoryName = 'Paletli Ekskavatörler',
---			@Model = 'MACHINE-999',
+--			@OldMainCategoryName = 'Miar Makine',
+--			@OldSubCategoryName = 'Miar Alt1',
+--			@Id = '41F56ACE-A575-4CAD-91F6-AA5E30D67364',
+--			@MainCategoryName = 'Son Deneme',
+--			@SubCategoryName = 'Alt2',
+--			@Model = NULL,
 --			@BrandName = NULL,
---			@Stock = 999,
---			@Rented = 99,
---			@Sold = 99,
---			@Year = 1999,
---			@HandStatus = 'Sýfýr',
---			@DescriptionInTR = 'TRTRT',
---			@DescriptionInEN = 'ENENNE',
+--			@Stock = NULL,
+--			@Rented = NULL,
+--			@Sold = NULL,
+--			@Year = NULL,
+--			@HandStatus = NULL,
+--			@DescriptionInTR = NULL,
+--			@DescriptionInEN = NULL,
 --			@ImageName = NULL,
---			@VideoName = 'xx.mp4',
+--			@VideoName = NULL,
 --			@PdfName = NULL
 
 --	EXEC	Machine_GetAll
@@ -183,7 +182,6 @@ GO
 --			@ErrorCode = @ErrorCode out,
 --			@ErrorDescription = @ErrorDescription out,
 --			@ErrorMessage = @ErrorMessage out
---	GO
 --ROLLBACK
 --GO
 

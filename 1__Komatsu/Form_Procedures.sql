@@ -1,6 +1,7 @@
 USE dbTemsa
 GO
 
+
 ----------------------- CREATE FORM -----------------------
 
 --BEGIN TRANSACTION
@@ -65,65 +66,53 @@ GO
 -------------------- GET ALL FORMS --------------------
 
 -- GENERAL COMMUNICATION FORM
-DECLARE @TotalCount int;
+--DECLARE @TotalCount int;
 
-EXEC	User_Form_GeneralCommunication_GetAll
-		@PageNumber = 1,
-		@PageSize = 10,
-		@GetAnsweredForms = NULL,
-		@TotalCount = @TotalCount OUT
+--EXEC	User_Form_GeneralCommunication_GetAll
+--		@PageNumber = 1,
+--		@PageSize = 10,
+--		@GetAnsweredForms = NULL,
+--		@TotalCount = @TotalCount OUT
 
-SELECT @TotalCount AS 'GeneralCommTotalCount'
+--SELECT @TotalCount AS 'GeneralCommTotalCount'
 		
 
--- GET OFFER FORM
-EXEC	User_Form_GetOffer_GetAll
-		@Language = 'EN',
-		@PageNumber = 1,
-		@PageSize = 10,
-		@FormStatusId = 2,
-		@TotalCount = @TotalCount OUT
+ --GET OFFER FORM
+--DECLARE @TotalCount int;
 
-SELECT @TotalCount AS 'GetOfferTotalCount'
+--EXEC	User_Form_GetOffer_GetAll
+--		@Language = 'EN',
+--		@PageNumber = 1,
+--		@PageSize = 10,
+--		@FormStatusId = 1,
+--		@TotalCount = @TotalCount OUT
+
+--SELECT @TotalCount AS 'GetOfferTotalCount'
+--GO
 
 
 -- RENTING FORM
-EXEC	User_Form_Renting_GetAll
-		@Language = 'TR',
-		@PageNumber = 1,
-		@PageSize = 10,
-		@FormStatusId = 2,
-		@TotalCount = @TotalCount OUT
+--DECLARE @TotalCount int;
 
-SELECT @TotalCount AS 'RentingTotalCount'
+--EXEC	User_Form_Renting_GetAll
+--		@Language = 'TR',
+--		@PageNumber = 1,
+--		@PageSize = 10,
+--		@FormStatusId = 2,
+--		@TotalCount = @TotalCount OUT
 
-
-
-
-
-
-		
-
-
-
-
-
-
-
-
-
+--SELECT @TotalCount AS 'RentingTotalCount'
 
 
 
 ---------------------- GET ALL FORMS OF ONE USER ------------------
 
---DECLARE @UserId uniqueidentifier = '54D46112-A872-40D4-AA2C-95DF70CA40E6',
+-- GENERAL COMMUNICATION FORM OF USER
+--DECLARE @UserId uniqueidentifier = 'CB6D665F-86E5-43AE-A329-32798A6DB594',
 --		@FormStatusId tinyint = 1,
 --		@Language char(2) = 'TR',
 --		@TotalCount int;
 
-
----- GENERAL COMMUNICATION FORM OF USER
 --EXEC	User_Form_GeneralCommunication_GetAllOfOneUserByUserId
 --		@UserId = @UserId,
 --		@PageNumber = 1,
@@ -134,7 +123,12 @@ SELECT @TotalCount AS 'RentingTotalCount'
 --SELECT @TotalCount AS 'GeneralCommTotalCount'
 
 
----- GET OFFER FORM OF USER
+-- GET OFFER FORM OF USER
+--DECLARE @UserId uniqueidentifier = 'A390BCA4-1975-4E9D-8DAE-5DF1812EBE20',
+--		@FormStatusId tinyint = 1,
+--		@Language char(2) = 'TR',
+--		@TotalCount int;
+
 --EXEC	User_Form_GetOffer_GetAllOfOneUserByUserId
 --		@Language = @Language,
 --		@UserId = @UserId,
@@ -144,9 +138,15 @@ SELECT @TotalCount AS 'RentingTotalCount'
 --		@TotalCount = @TotalCount OUT
 
 --SELECT @TotalCount AS 'GetOfferTotalCount'
+--GO
 
 
----- RENTING FORM OF USER
+-- RENTING FORM OF USER
+--DECLARE @UserId uniqueidentifier = 'C43F930D-5BE9-48EE-843E-845E750F2246',
+--		@FormStatusId tinyint = 1,
+--		@Language char(2) = 'TR',
+--		@TotalCount int;
+
 --EXEC	User_Form_Renting_GetAllOfOneUserByUserId
 --		@Language = @Language,
 --		@UserId = @UserId,

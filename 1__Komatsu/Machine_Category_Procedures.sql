@@ -1,7 +1,98 @@
-USE dbTemsa
-GO
+--USE dbTemsa
+--GO
 
------------------------ ADD MAINCATEGORY AND SUBCATEGORIES -----------------------
+--SELECT * FROM Machines_Categories_BaseMainCategories
+--SELECT * FROM Machines_Categories_BaseSubCategories
+--SELECT * FROM Machines_Categories
+--SELECT * FROM Machines_Categories_MainCategoriesByLanguages
+--SELECT * FROM Machines_Categories_SubCategoriesByLanguages
+--GO
+
+
+
+----------------------- ADD MAIN CATEGORY AND SUBCATEGORIES -----------------------
+
+--BEGIN TRANSACTION
+--	SELECT * FROM Machines_Categories_BaseMainCategories
+--	SELECT * FROM Machines_Categories_BaseSubCategories
+--	SELECT * FROM Machines_Categories
+--	SELECT * FROM Machines_Categories_MainCategoriesByLanguages
+--	SELECT * FROM Machines_Categories_SubCategoriesByLanguages
+
+	
+--	DECLARE @StatusCode int,
+--			@ErrorCode varchar(max),
+--			@ErrorDescription varchar(max),
+--			@ErrorMessage varchar(max);
+
+--	EXEC	Machine_Category_AddMainCategory
+--			@Language = 'TR',
+--			@MainCategoryInEN = 'Vehicles',
+--			@MainCategoryInTR = 'Araçlar'
+--			@StatusCode = @StatusCode OUT,
+--			@ErrorCode = @ErrorCode OUT,
+--			@ErrorDescription = @ErrorDescription OUT,
+--			@ErrorMessage = @ErrorMessage OUT;
+
+--	SELECT	@StatusCode 'StatusCode',
+--			@ErrorCode 'ErrorCode',
+--			@ErrorDescription 'ErrorDescription' ,
+--			@ErrorMessage 'ErrorMessage';
+
+
+--	SELECT * FROM Machines_Categories_BaseMainCategories
+--	SELECT * FROM Machines_Categories_BaseSubCategories
+--	SELECT * FROM Machines_Categories
+--	SELECT * FROM Machines_Categories_MainCategoriesByLanguages
+--	SELECT * FROM Machines_Categories_SubCategoriesByLanguages
+--ROLLBACK
+--GO
+
+
+
+----------------------- ADD NEW SUBCATEGORIES TO MAINCATEGORY -----------------------
+
+--BEGIN TRANSACTION
+--	SELECT * FROM Machines_Categories_BaseMainCategories
+--	SELECT * FROM Machines_Categories_BaseSubCategories
+--	SELECT * FROM Machines_Categories
+--	SELECT * FROM Machines_Categories_MainCategoriesByLanguages
+--	SELECT * FROM Machines_Categories_SubCategoriesByLanguages
+
+	
+--	DECLARE @StatusCode int,
+--			@ErrorCode varchar(max),
+--			@ErrorDescription varchar(max),
+--			@ErrorMessage varchar(max);
+
+--	EXEC	Machine_Category_AddSubCategories
+--			@Language = 'TR',
+--			@MainCategoryInEN = 'Work Machines',
+--			@SubCategoriesInEN = 'Car,Truck,Ship,Plane',
+--			@SubCategoriesInTR = 'Araba,Kamyon,Gemi,Uçak',
+--			@SplitChar = ',',
+--			@StatusCode = @StatusCode OUT,
+--			@ErrorCode = @ErrorCode OUT,
+--			@ErrorDescription = @ErrorDescription OUT,
+--			@ErrorMessage = @ErrorMessage OUT;
+
+--	SELECT	@StatusCode 'StatusCode',
+--			@ErrorCode 'ErrorCode',
+--			@ErrorDescription 'ErrorDescription' ,
+--			@ErrorMessage 'ErrorMessage';
+
+
+--	SELECT * FROM Machines_Categories_BaseMainCategories
+--	SELECT * FROM Machines_Categories_BaseSubCategories
+--	SELECT * FROM Machines_Categories
+--	SELECT * FROM Machines_Categories_MainCategoriesByLanguages
+--	SELECT * FROM Machines_Categories_SubCategoriesByLanguages
+--ROLLBACK
+--GO
+
+
+
+----------------------- ADD MAIN CATEGORY AND SUBCATEGORIES -----------------------
 
 --BEGIN TRANSACTION
 	--SELECT * FROM Machines_Categories_BaseMainCategories
@@ -67,10 +158,10 @@ GO
 --			@ErrorMessage varchar(max);
 
 --	EXEC	Machine_Category_UpdateMainCategory
---			@Language = 'EN',
+--			@Language = 'TR',  -- page language
 --			@OldMainCategoryNameInEN = 'Work Machines',
---			@NewMainCategoryNameInEN = 'Work Machines 2',
---			@NewMainCategoryNameInTR = 'Ýþ Makineler 2',
+--			@NewMainCategoryNameInEN = 'Book112',
+--			@NewMainCategoryNameInTR = 'Kitap112',
 --			@StatusCode = @StatusCode OUT,
 --			@ErrorCode = @ErrorCode OUT,
 --			@ErrorDescription = @ErrorDescription OUT,
@@ -184,78 +275,78 @@ GO
 
 -------------------------- DELETE MAINCATEGORY ------------------------
 
-----BEGIN TRANSACTION
-----	SELECT * FROM Machines_Categories_BaseMainCategories
-----	SELECT * FROM Machines_Categories_BaseSubCategories
-----	SELECT * FROM Machines_Categories
-----	SELECT * FROM Machines_Categories_MainCategoriesByLanguages
-----	SELECT * FROM Machines_Categories_SubCategoriesByLanguages
+--BEGIN TRANSACTION
+--	SELECT * FROM Machines_Categories_BaseMainCategories
+--	SELECT * FROM Machines_Categories_BaseSubCategories
+--	SELECT * FROM Machines_Categories
+--	SELECT * FROM Machines_Categories_MainCategoriesByLanguages
+--	SELECT * FROM Machines_Categories_SubCategoriesByLanguages
 
 	
-----	DECLARE @StatusCode int,
-----			@ErrorCode varchar(max),
-----			@ErrorDescription varchar(max),
-----			@ErrorMessage varchar(max);
+--	DECLARE @StatusCode int,
+--			@ErrorCode varchar(max),
+--			@ErrorDescription varchar(max),
+--			@ErrorMessage varchar(max);
 
-----	EXEC	Machine_Category_DeleteMainCategory
-----			@Language = 'TR',
-----			@MainCategoryInEN = 'Work Machines',
-----			@StatusCode = @StatusCode OUT,
-----			@ErrorCode = @ErrorCode OUT,
-----			@ErrorDescription = @ErrorDescription OUT,
-----			@ErrorMessage = @ErrorMessage OUT;
+--	EXEC	Machine_Category_DeleteMainCategory
+--			@Language = 'TR',
+--			@MainCategoryInEN = 'Mining Machinery',
+--			@StatusCode = @StatusCode OUT,
+--			@ErrorCode = @ErrorCode OUT,
+--			@ErrorDescription = @ErrorDescription OUT,
+--			@ErrorMessage = @ErrorMessage OUT;
 
-----	SELECT	@StatusCode 'StatusCode',
-----			@ErrorCode 'ErrorCode',
-----			@ErrorDescription 'ErrorDescription' ,
-----			@ErrorMessage 'ErrorMessage';
+--	SELECT	@StatusCode 'StatusCode',
+--			@ErrorCode 'ErrorCode',
+--			@ErrorDescription 'ErrorDescription' ,
+--			@ErrorMessage 'ErrorMessage';
 
 
-----	SELECT * FROM Machines_Categories_BaseMainCategories
-----	SELECT * FROM Machines_Categories_BaseSubCategories
-----	SELECT * FROM Machines_Categories
-----	SELECT * FROM Machines_Categories_MainCategoriesByLanguages
-----	SELECT * FROM Machines_Categories_SubCategoriesByLanguages
-----ROLLBACK
-----GO
+--	SELECT * FROM Machines_Categories_BaseMainCategories
+--	SELECT * FROM Machines_Categories_BaseSubCategories
+--	SELECT * FROM Machines_Categories
+--	SELECT * FROM Machines_Categories_MainCategoriesByLanguages
+--	SELECT * FROM Machines_Categories_SubCategoriesByLanguages
+--ROLLBACK
+--GO
 
 
 
 ----------------- DELETE SUBCATEGORIES ---------------
 
-----BEGIN TRANSACTION
-----	SELECT * FROM Machines_Categories_BaseMainCategories
-----	SELECT * FROM Machines_Categories_BaseSubCategories
-----	SELECT * FROM Machines_Categories
-----	SELECT * FROM Machines_Categories_MainCategoriesByLanguages
-----	SELECT * FROM Machines_Categories_SubCategoriesByLanguages
+--BEGIN TRANSACTION
+--	SELECT * FROM Machines_Categories_BaseMainCategories
+--	SELECT * FROM Machines_Categories_BaseSubCategories
+--	SELECT * FROM Machines_Categories
+--	SELECT * FROM Machines_Categories_MainCategoriesByLanguages
+--	SELECT * FROM Machines_Categories_SubCategoriesByLanguages
 
 	
-----	DECLARE @StatusCode int,
-----			@ErrorCode varchar(max),
-----			@ErrorDescription varchar(max),
-----			@ErrorMessage varchar(max);
+--	DECLARE @StatusCode int,
+--			@ErrorCode varchar(max),
+--			@ErrorDescription varchar(max),
+--			@ErrorMessage varchar(max);
 
-----	EXEC	Machine_Category_DeleteSubcategories
-----			@Language = 'TR',
-----			@MainCategoryInEN = 'Work Machines',
-----			@SubcategoriesInEN = 'Crawler Excavators,Bulldozers,Rock Truck',
-----			@SplitChar = ',',
-----			@StatusCode = @StatusCode OUT,
-----			@ErrorCode = @ErrorCode OUT,
-----			@ErrorDescription = @ErrorDescription OUT,
-----			@ErrorMessage = @ErrorMessage OUT;
+--	EXEC	Machine_Category_DeleteSubcategories
+--			@Language = 'TR',
+--			@MainCategoryInEN = 'Work Machines',
+--			@Subcategories = 'Dozerler,Lastikli,Paletli Ekskavatörler,Yükleyiciler,Kaya Kamyonu,Lastikli Ekskavatörler',
+--			@SplitChar = ',',
+--			@StatusCode = @StatusCode OUT,
+--			@ErrorCode = @ErrorCode OUT,
+--			@ErrorDescription = @ErrorDescription OUT,
+--			@ErrorMessage = @ErrorMessage OUT;
 
-----	SELECT	@StatusCode 'StatusCode',
-----			@ErrorCode 'ErrorCode',
-----			@ErrorDescription 'ErrorDescription' ,
-----			@ErrorMessage 'ErrorMessage';
+--	SELECT	@StatusCode 'StatusCode',
+--			@ErrorCode 'ErrorCode',
+--			@ErrorDescription 'ErrorDescription' ,
+--			@ErrorMessage 'ErrorMessage';
 
 
-----	SELECT * FROM Machines_Categories_BaseMainCategories
-----	SELECT * FROM Machines_Categories_BaseSubCategories
-----	SELECT * FROM Machines_Categories
-----	SELECT * FROM Machines_Categories_MainCategoriesByLanguages
-----	SELECT * FROM Machines_Categories_SubCategoriesByLanguages
-----ROLLBACK
-----GO
+--	SELECT * FROM Machines_Categories_BaseMainCategories
+--	SELECT * FROM Machines_Categories_BaseSubCategories
+--	SELECT * FROM Machines_Categories
+--	SELECT * FROM Machines_Categories_MainCategoriesByLanguages
+--	SELECT * FROM Machines_Categories_SubCategoriesByLanguages
+--ROLLBACK
+--GO
